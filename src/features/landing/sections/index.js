@@ -1,0 +1,7 @@
+export { HeroSection } from './HeroSection'
+export { BenefitsSection } from './BenefitsSection'
+export { InstitucionalSection } from './InstitucionalSection'
+export { LifestyleSection } from './LifestyleSection'
+export { ProductsSection } from './ProductsSection'
+export { TestimonialsSection } from './TestimonialsSection'
+export { CtaSection } from './CtaSection'
