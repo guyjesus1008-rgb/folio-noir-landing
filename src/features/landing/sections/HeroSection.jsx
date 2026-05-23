@@ -62,19 +62,22 @@ export function HeroSection() {
               variants={itemVariants}
               className="flex flex-col sm:flex-row items-start sm:items-center gap-6"
             >
-              <button
+              <motion.button
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.98 }}
                 data-cursor="expand"
-                className="border border-gold text-cream font-sans text-xs uppercase tracking-widest px-8 py-3 rounded-xl hover:bg-gold/10 transition-all duration-300 hover:-translate-y-0.5"
+                className="border border-gold text-cream font-sans text-xs uppercase tracking-widest px-8 py-3 rounded-xl hover:bg-gold/10 transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)]"
               >
                 Conhecer o Espaço
-              </button>
-              <a
+              </motion.button>
+              <motion.a
+                whileHover={{ x: 4 }}
                 href="#sobre"
                 data-cursor="expand"
                 className="text-cream font-sans text-xs uppercase tracking-widest underline underline-offset-4 hover:text-gold transition-colors duration-300"
               >
                 Nossa História
-              </a>
+              </motion.a>
             </motion.div>
 
             {/* Scroll Indicator */}
@@ -112,17 +115,18 @@ export function HeroSection() {
             {/* Vertical line */}
             <div className="hidden md:block absolute -left-8 top-0 w-px h-32 bg-gold opacity-30" />
 
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.4)]">
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.4)] group">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-cover gpu-accelerated"
+                poster="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80"
+                className="w-full h-full object-cover gpu-accelerated transition-transform duration-700 group-hover:scale-105"
               >
                 <source src="/videos/cafe.mp4" type="video/mp4" />
               </video>
-              <div className="absolute inset-0 bg-deep opacity-15" />
+              <div className="absolute inset-0 bg-deep opacity-15 group-hover:opacity-10 transition-opacity duration-300" />
             </div>
           </motion.div>
         </div>

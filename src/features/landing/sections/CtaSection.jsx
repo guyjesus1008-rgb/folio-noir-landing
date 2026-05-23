@@ -1,4 +1,5 @@
 import { RevealWrapper, SectionLabel } from '@/shared/ui'
+import { motion } from 'framer-motion'
 
 export function CtaSection() {
   return (
@@ -21,19 +22,22 @@ export function CtaSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button
+            <motion.button
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
               data-cursor="expand"
-              className="bg-gold text-deep font-sans text-xs uppercase tracking-widest px-10 py-4 rounded-xl hover:bg-gold-lt transition-colors duration-300 hover:-translate-y-0.5"
+              className="bg-gold text-deep font-sans text-xs uppercase tracking-widest px-10 py-4 rounded-xl hover:bg-gold-lt transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]"
             >
               Reservar Mesa
-            </button>
-            <a
+            </motion.button>
+            <motion.a
+              whileHover={{ x: 4 }}
               href="#cardapio"
               data-cursor="expand"
               className="text-cream underline underline-offset-4 font-sans text-xs uppercase tracking-widest hover:text-gold transition-colors duration-300"
             >
               Ver Cardápio Completo
-            </a>
+            </motion.a>
           </div>
         </RevealWrapper>
       </div>
